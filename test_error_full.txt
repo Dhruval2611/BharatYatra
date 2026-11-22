@@ -1,0 +1,37 @@
+
+Running 2 tests using 2 workers
+
+[1A[2K[1/2] [chromium] › tests\admin.spec.ts:18:5 › Admin Dashboard › Dashboard loads with stats
+[1A[2K[2/2] [chromium] › tests\admin.spec.ts:25:5 › Admin Dashboard › Admin Navigation works
+[1A[2K  1) [chromium] › tests\admin.spec.ts:18:5 › Admin Dashboard › Dashboard loads with stats ──────────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('Total Users')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('Total Users')[22m
+
+
+      19 |         await expect(page).toHaveURL(/.*\/#\/admin\/dashboard/);
+      20 |         await expect(page.getByText('Total Packages')).toBeVisible();
+    > 21 |         await expect(page.getByText('Total Users')).toBeVisible();
+         |                                                     ^
+      22 |         await expect(page.getByText('Total Bookings')).toBeVisible();
+      23 |     });
+      24 |
+        at E:\BharatYatra\tests\admin.spec.ts:21:53
+
+    Error Context: test-results\admin-Admin-Dashboard-Dashboard-loads-with-stats-chromium\error-context.md
+
+
+[1A[2K  1 failed
+    [chromium] › tests\admin.spec.ts:18:5 › Admin Dashboard › Dashboard loads with stats ───────────
+  1 passed (10.0s)
+
+[36m  Serving HTML report at http://localhost:63810. Press Ctrl+C to quit.[39m
+npm error A complete log of this run can be found in: C:\Users\Dhruval\AppData\Local\npm-cache\_logs\2025-12-22T07_01_48_101Z-debug-0.log
